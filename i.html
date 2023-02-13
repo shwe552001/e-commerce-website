@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+<style>
+  * {
+  box-sizing: border-box;
+}
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    background-image: url(loginpic.jpg);
+    background-color: darkblue;
+    background-repeat:no-repeat;
+    background-attachment: fixed;
+    background-size:cover;
+    border-color: black 10px;
+   }
+form { 
+   border-color: black;
+    width:30%;  
+    height: 50%;
+    border-radius:40px;  
+    margin-left: 200px;  
+    background: white;  
+  margin-top: 100px;
+  border-style: solid;
+  color: black;
+  box-shadow: 0px 0px 6px 7px gray;
+  background-color: white;
+}
+
+input[type=text], input[type=password] {
+    color:mediumvioletred;  
+    background: antiquewhite;
+    padding: 15px;  
+    margin-left: 10%;  
+    align-items: right;
+    text-align: center;
+    width:70%;
+    font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    text-decoration-color: antiquewhite;
+    border-radius: 30px;
+    border-color: mediumvioletred;
+    border: solid;
+    font-size:20px;
+ 
+}
+
+button {
+  background-color:light black;
+  color:black;
+  padding: 15px;
+  box-shadow: inset;
+  border-radius: 30px;
+ font-size: 20px;
+  border: solid;
+  cursor: pointer;
+  width:60%;
+  margin-left: 15%;  
+  align-items:left;
+
+    text-align: center;
+}
+
+button:hover {
+  opacity: 0.8;
+}
+
+
+
+.imgcontainer {
+  text-align: center;
+  margin: 4px 0 4px 0;
+}
+
+img.avatar {
+  width: 20%;
+  border-radius: auto;
+}
+
+.container {
+  padding: 20px;
+}
+
+
+
+</style>
+</head>
+<body>
+
+  <form name="f1" action = "authen.php" onsubmit = "return validation()" method = "POST"> 
+ 
+  <div class="imgcontainer">
+    
+ 
+    
+  <h1>RIWAAYAT LOGIN</h1>
+    <img src="logimg.jpg" alt="Avatar" class="avatar" style="width: auto;">
+  </div>
+
+  <div class="container">
+
+    <p>
+            <p><label><b>Username</b></label></p>
+    <input type="text" placeholder="Username" name="user" id="user"required></p>
+
+   <p> <label><b>Password</b></label></p>
+   <p> <input type="password" placeholder="Password" name="pass" id="pass" required></p>
+    <p><input type="checkbox" onclick="myFunction()"><i>Show Password</i></p>
+    
+<script>
+    function myFunction() {
+      var x = document.getElementById("pass");
+      if (x.type === "password") {
+        x.type = "text";
+      } else {
+        x.type = "password";
+      }
+    }
+    </script>
+
+       <p> <form action="mainpg.html" target="_self">
+   <button type="submit">Login</button></p></form>
+   <p> <i>Don't have an account?
+    <a href="signf.html">Create New</a>
+   </i></p>
+   
+  </div>
+
+
+ 
+  </div>
+</form>
+<script>  
+  function validation()  
+  {  
+      var id=document.f1.user.value;  
+      var ps=document.f1.pass.value;  
+      if(id.length=="" && ps.length=="") {  
+          alert("User Name and Password fields are empty");  
+          return false;  
+      }  
+      else  
+      {  
+          if(id.length=="") {  
+              alert("User Name is empty");  
+              return false;  
+          }   
+          if (ps.length=="") {  
+          alert("Password field is empty");  
+          return false;  
+          }  
+      }                             
+  }  
+</script>  
+
+
+</body>
+</html>

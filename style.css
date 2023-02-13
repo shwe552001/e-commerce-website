@@ -1,0 +1,25 @@
+body{   
+    background:black;  
+}  
+#frm{  
+    border: solid blueviolet 1px;  
+    width:25%;  
+    border-radius:25px;  
+    margin: 120px auto;  
+    background:antiquewhite;  
+    padding: 70px;  
+}  
+#btn{  
+    color:white;  
+    background: #272530;
+    padding: 5px;  
+    margin-left: 10%;  
+    align-items: left;
+    text-align: center;
+    width:100%;
+    font-family: 'Lucida Sans';
+    text-decoration-color: antiquewhite;
+}  
+.frm{
+    color:antiquewhite
+}
